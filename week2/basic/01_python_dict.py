@@ -69,7 +69,7 @@ if __name__ == "__main__":
         {"name": "David", "score": 95}
     ]
     
-    avg, studetns = find_above_average_students(students1)
+    avg, students = find_above_average_students(students1)
     print(f"평균 점수: {avg}")
     print(f"평균 이상 학생: {students}")
     print()
