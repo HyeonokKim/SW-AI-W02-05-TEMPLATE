@@ -47,7 +47,7 @@ def is_palindrome(s):
 
     if test == test[::-1]:
         return(True)
-    else:
+    else:   
         return(False)
 
     #return False
