@@ -49,10 +49,7 @@ def find_max_divide_conquer(arr, left, right):
     right_max = find_max_divide_conquer(arr, mid+1, right)
     
     # TODO: 둘 중 큰 값 반환
-    if left_max > right_max:
-        return left_max
-    else: 
-        return right_max
+    return max(left_max, right_max)
 
 # 테스트 케이스
 if __name__ == "__main__":

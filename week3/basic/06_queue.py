@@ -46,7 +46,7 @@ def process_print_queue(jobs):
     ## 작업 처리 (출력 및 리스트에 추가)
     while queue:
         job = queue.popleft()
-        print(f"처리:{job}")
+        print(f"처리: {job}")
         processed.append(job)
 
     return processed

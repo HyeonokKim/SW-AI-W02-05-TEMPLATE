@@ -43,25 +43,30 @@ class LinkedList:
             return 
         
         # TODO: 마지막 노드 찾기
-        current = self.head
+        last_node = self.head
+        next_node = self.head.next
+        while True:
+            if not next_node:
+                break
+            last_node = next_node
+            next_node = next_node.next
 
-        while current.next is not None:
-            current = current.next
 
         # TODO: 마지막 노드의 next를 new_node로 설정
-        current.next = new_node
+        last_node.next = new_node
     
     def print_list(self):
         """리스트의 모든 값 출력"""
         values = []
         
         # TODO: head부터 시작
-        current = self.head
+        values.append(self.head.data)
         
         # TODO: 끝까지 순회하며 값 수집
-        while current is not None:
-            values.append(current.data)
-            current = current.next
+        next_node = self.head.next
+        while next_node:
+            values.append(next_node.data)
+            next_node = next_node.next
         
         return values
 

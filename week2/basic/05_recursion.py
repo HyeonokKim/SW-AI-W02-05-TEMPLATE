@@ -60,6 +60,7 @@ def fibonacci(n):
     else:
     
     # TODO: recursive case를 작성하세요
+    # 현재 + 나머지
         return (fibonacci(n-1) + fibonacci(n-2))
 
 
