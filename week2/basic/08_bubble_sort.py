@@ -32,6 +32,7 @@ def bubble_sort(arr):
     Returns:
         정렬된 배열
     """
+    arr = arr[:]
     n = len(arr)
     
     # TODO: 외부 반복문 - n-1번 반복

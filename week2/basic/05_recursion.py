@@ -36,8 +36,10 @@ def factorial(n):
     # n이 0이거나 1이면 1을 반환
     if n == 0:
         return 1
-    elif n == 1:
+    
+    if n == 1:
         return 1
+    
     # TODO: recursive case를 작성하세요
     return n*factorial(n-1)
 
@@ -55,13 +57,13 @@ def fibonacci(n):
     # n이 0이면 0, n이 1이면 1 반환
     if n == 0:
         return 0
-    elif n == 1:
+    
+    if n == 1:
         return 1
-    else:
     
     # TODO: recursive case를 작성하세요
     # 현재 + 나머지
-        return (fibonacci(n-1) + fibonacci(n-2))
+    return (fibonacci(n-1) + fibonacci(n-2))
 
 
 # 테스트 케이스

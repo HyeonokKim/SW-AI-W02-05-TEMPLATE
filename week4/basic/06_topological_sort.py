@@ -47,7 +47,7 @@ def topological_sort(vertices, edges):
     # TODO: 그래프 구성 및 진입 차수 계산
     for a,b in edges:
         graph[a].append(b)
-        indegree[b]  += 1
+        indegree[b] += 1
 
     # TODO: 진입 차수가 0인 정점들을 큐에 추가
     queue = deque()
