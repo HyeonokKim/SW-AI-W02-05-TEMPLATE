@@ -84,10 +84,10 @@ def postorder(root):
     # TODO: root가 None이면 빈 리스트 반환
     if root is None:
         return result
-    
+
     # TODO: 왼쪽 서브트리 순회
     result.extend(postorder(root.left))
-    
+
     # TODO: 오른쪽 서브트리 순회
     result.extend(postorder(root.right))
     

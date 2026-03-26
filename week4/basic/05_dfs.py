@@ -46,6 +46,7 @@ def dfs(graph, start, visited=None):
     if visited is None:
         visited = []
 
+
     # TODO: 현재 정점 방문
     visited.append(start)
     
@@ -54,7 +55,7 @@ def dfs(graph, start, visited=None):
     for neighbor in graph[start]:
         if neighbor not in visited:
             dfs(graph, neighbor, visited)
-    
+
     return visited
 
 # 테스트 케이스
