@@ -100,29 +100,6 @@ def fibonacci_memo(n, memo=None):
 
     return memo[n]
 
-# #  Bottom-Up 방식 
-# def fibonacci_bottom_up(n):
-#     # base case
-#     if n == 0:
-#         return 0 
-#     if n == 1:
-#         return 1
-    
-#     # TODO : DP 테이블 생성
-#     dp = [0]*(n+1)
-
-#     # TODO : 초기값 설정
-#     dp[0] = 0
-#     dp[1] = 1
-
-#     # TODO: 2부터 n까지 차례대로 채우기
-#     for i in range(2,n+1):
-#         dp[i] = dp[i-1] + dp[i-2]
-
-#     # TODO : n번째 값 반환
-#     return dp[n]
-
-
 
 # 테스트 케이스
 if __name__ == "__main__":
