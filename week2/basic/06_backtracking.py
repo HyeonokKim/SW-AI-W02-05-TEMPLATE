@@ -57,11 +57,9 @@ def combinations(n, k):
             # 선택
             current_combination.append(i)
             # 탐색
-            backtrack(i+1,current_combination)
+            backtrack(i+1, current_combination)
             # 취소
-            current_combination.pop()
-            
-                
+            current_combination.pop()           
 
     backtrack(1, [])
     return result

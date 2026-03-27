@@ -84,18 +84,45 @@ def fibonacci_memo(n, memo=None):
         n번째 피보나치 수
     """
     # TODO: memo가 None이면 빈 딕셔너리로 초기화
-    pass
+    if memo is None:
+        memo = {}
     
     # TODO: base case 
-    pass
+    if n <= 1: 
+        return n
     
     # TODO: 이미 계산한 값이 memo에 있으면 반환
-    pass
+    if n in memo:
+        return memo[n]
     
     # TODO: 재귀 호출하여 계산하고 memo에 저장
-    pass
-    
+    memo[n] = fibonacci_memo(n-1, memo) + fibonacci_memo(n-2, memo)
+
     return memo[n]
+
+# #  Bottom-Up 방식 
+# def fibonacci_bottom_up(n):
+#     # base case
+#     if n == 0:
+#         return 0 
+#     if n == 1:
+#         return 1
+    
+#     # TODO : DP 테이블 생성
+#     dp = [0]*(n+1)
+
+#     # TODO : 초기값 설정
+#     dp[0] = 0
+#     dp[1] = 1
+
+#     # TODO: 2부터 n까지 차례대로 채우기
+#     for i in range(2,n+1):
+#         dp[i] = dp[i-1] + dp[i-2]
+
+#     # TODO : n번째 값 반환
+#     return dp[n]
+
+
 
 # 테스트 케이스
 if __name__ == "__main__":
@@ -116,5 +143,4 @@ if __name__ == "__main__":
     # 비교: Week1의 재귀 방식은 fib(50)을 계산하기 어려움
     print("참고: 일반 재귀는 fib(40)도 몇 초 걸리지만")
     print("메모이제이션은 fib(100)도 순식간에 계산!")
-
 
