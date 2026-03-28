@@ -7,7 +7,6 @@ numbers = []
 for i in range(9):
     numbers.append(int(input()))
 
-
 max_value = max(numbers)
 position = numbers.index(max_value) + 1
 
